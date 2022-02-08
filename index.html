@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Shop</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="onInit()">
+    <h1>Ben's Book Shop</h1>
+    <section class="creatBooksArea">
+        <input type="text" name="bookTitle" placeholder="Enter book title" />
+        <input type="number" name="bookPrice" placeholder="Enter book price in dollars" min="0" />
+        <button class="addBookButton" onclick="onAddBook()">add book</button>
+    </section>
+    <table class="bookscontainer darkTable"></table>
+    <div class="modal">
+        <h3></h3>
+        <h4>By <span></span></h4>
+        <div class="pic"></div>
+        <h5>Synopsis:</h5>
+        <section class="rate"></section>
+        <p></p>
+        <button onclick="onCloseModal()">Close</button>
+    </div>
+    <section class="creatBooksArea">
+        <button onclick="onSetPage('PRE')">⏪</button>
+        <a class="pages"></a>
+        <button onclick="onSetPage('NEXT')">⏩</button>
+        <div class="currPage"></div>
+    </section>
+    <script src="js\services\util.service.js"></script>
+    <script src="js\services\storage.service.js"></script>
+    <script src="js\services\book.service.js"></script>
+    <script src="js\book.controller.js"></script>
+</body>
+
+</html>
